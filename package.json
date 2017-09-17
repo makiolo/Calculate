@@ -1,0 +1,35 @@
+{
+  "name": "calculate",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/newlawrence/Calculate.svg?branch=master)](https://travis-ci.org/newlawrence/Calculate)\r [![codecov](https://codecov.io/gh/newlawrence/Calculate/branch/master/graph/badge.svg)](https://codecov.io/gh/newlawrence/Calculate)\r [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/newlawrence/Calculate/blob/7f96b434dd77461f17a71f3fe3025c21b73ed0d0/copying)",
+  "bin": {
+	"calc_c": "calc_c"
+  },
+  "scripts": {
+    "ci": "cmaki ci",
+    "clean": "cmaki clean",
+    "setup": "cmaki setup",
+    "compile": "cmaki compile",
+    "install": "npm run calculate",
+    "calculate": "cmaki setup -e TESTING=TRUE && cmaki compile -e TARGET=build",
+    "binding": "cmaki setup -e TESTING=TRUE -e BINDING=TRUE && cmaki compile -e TARGET=build",
+    "test": "cmaki tests",
+    "upload": "cmaki upload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newlawrence/Calculate.git"
+  },
+  "author": "Alberto Lorenzo Márquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/newlawrence/Calculate/issues"
+  },
+  "homepage": "https://github.com/newlawrence/Calculate#readme",
+  "devDependencies": {
+    "cmaki": "github:makiolo/cmaki",
+    "cmaki_generator": "github:makiolo/cmaki_generator",
+    "cmaki_identifier": "github:makiolo/cmaki_identifier",
+    "cmaki_scripts": "github:makiolo/cmaki_scripts"
+  }
+}
