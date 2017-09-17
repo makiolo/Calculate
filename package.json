@@ -6,10 +6,11 @@
     "clean": "cmaki clean",
     "setup": "cmaki setup",
     "compile": "cmaki compile",
-    "install": "npm run calculate",
+    "install": "npm run optimized",
     "calculate": "cmaki setup -e TESTING=TRUE -e COVERAGE=TRUE && cmaki compile -e TARGET=calc_c",
     "binding": "cmaki setup -e TESTING=TRUE -e BINDING=TRUE && cmaki compile -e TARGET=calc_c",
-    "test": "cmaki tests",
+    "optimized": "cmaki setup -e MODE=Release -e TESTING=TRUE && cmaki compile -e MODE=Release -e TARGET=calc_c",
+    "test": "cmaki test -e MODE=Release",
     "upload": "cmaki upload",
     "docker": "cmaki docker"
   },
