@@ -89,4 +89,44 @@ $ make conda_package-Py2.7
 
 ```
 
+### Compiling using NPM
+
+You can compile using npm:
+```bash
+$ npm install
+```
+Your binaries are installed in $(pwd)/bin by default, you can change that with CMAKI_INSTALL environment var:
+```bash
+$ CMAKI_INSTALL=$(pwd)/other/prefix npm install
+```
+Calculate not is compatible with "ctest" yet, in future, you will execute tests with:
+```bash
+$ npm test
+```
+Execute a full continuous integration process:
+```bash
+$ npm run ci
+```
+Execute a full continuous integration process but INSIDE a docker image:
+```bash
+$ IMAGE=windows-x86 npm run docker
+```
+Valid values for $IMAGE come from dockcross/dockcross project:
+- linux-s390x
+- android-arm
+- linux-x86
+- linux-x64
+- linux-arm64
+- linux-armv5
+- linux-armv6
+- linux-armv7
+- linux-mips
+- linux-mipsel
+- linux-ppc64le
+- windows-x86
+- windows-x64
+- browser-asmjs
+- manylinux-x64
+- manylinux-x86
+
 **License:** MIT (see `copying`).

@@ -1,8 +1,9 @@
-#include <string>
-
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 
+#include <string>
+
+#include "calculate/info.h"
 #include "calculate/binding.h"
 
 
@@ -16,7 +17,7 @@ TEST_CASE("Metadata", "[metadata]") {
         calculate_c.author(output);
         CHECK(output == std::string("Alberto Lorenzo"));
         calculate_c.date(output);
-        CHECK(output == std::string("2017/05/28"));
+        CHECK(output == std::string("2017/09/17"));
     }
 
 }
