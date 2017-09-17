@@ -131,9 +131,6 @@ Valid values for $IMAGE come from dockcross/dockcross project:
 
 A minimal example of .travis.yml can be:
 ```yaml
-sudo: required
-dist: trusty
-language: c
 services: docker
 os: linux
 env:
@@ -142,6 +139,5 @@ env:
 script:
   - bash <(curl -s https://raw.githubusercontent.com/makiolo/cmaki_scripts/master/docker.sh)
 ```
-
 
 **License:** MIT (see `copying`).
