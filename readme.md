@@ -129,4 +129,19 @@ Valid values for $IMAGE come from dockcross/dockcross project:
 - manylinux-x64
 - manylinux-x86
 
+A minimal example of .travis.yml can be:
+```yaml
+sudo: required
+dist: trusty
+language: c
+services: docker
+os: linux
+env:
+  - IMAGE=windows-x64
+  - IMAGE=linux-x64
+script:
+  - bash <(curl -s https://raw.githubusercontent.com/makiolo/cmaki_scripts/master/docker.sh)
+```
+
+
 **License:** MIT (see `copying`).
